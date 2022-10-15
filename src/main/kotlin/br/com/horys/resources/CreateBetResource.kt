@@ -27,7 +27,8 @@ class CreateBetResource(
             type = Bet.TypeBet.valueOf(request.type),
             supplier = supplier,
             reservation = request.reservation,
-            date = LocalDate.parse(request.date)
+            date = LocalDate.parse(request.date),
+            availableReservation = request.reservation
         )
         betRepository.persist(
             bet

@@ -25,11 +25,11 @@ data class Bet(
     @JoinColumn(name = "supplier_id")
     val supplier: Supplier,
     val reservation: Int,
+    val availableReservation: Int,
     val date: LocalDate,
     val createdAt: LocalDateTime = LocalDateTime.now(),
     val updatedAt: LocalDateTime = LocalDateTime.now()
 ) {
-
     enum class TypeBet {
         LOTOMANIA, LOTOFACIL
     }
